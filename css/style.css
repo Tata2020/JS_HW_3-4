@@ -1,0 +1,41 @@
+body {
+	font-family: arial, verdana, sans-serif;
+}
+.wrapper {
+	width: 800px;
+}
+.title {
+	margin: 5px 209px 5px;
+	font-weight: normal;
+	font-size: 19px;
+}
+form {
+	margin-top: 37px;
+}
+.list {
+	margin: 6px 37px;
+	line-height: 36px;
+	font-size: 110%;
+}
+.list__item {
+	margin-left: 14px;
+	line-height: 24px;
+	font-size: 85%;
+}
+label {
+	margin-left: 6px;
+}
+input[type="checkbox"] {
+	margin-left: 13px;
+	vertical-align: middle;
+}
+input[type="submit"] {
+	display: block;
+	margin-top: 49px;
+	margin-left: 192px;
+	text-align: center;
+	padding: 13px 40px;
+	background: rgba(158, 223, 235, 0.42);
+	border: 3px solid grey;
+	font-size: 120%;
+}
