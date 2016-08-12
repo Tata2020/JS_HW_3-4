@@ -25,15 +25,20 @@ var newDomTest = {
 			  elementForm.appendChild  (inputItem);
 			  },	  
 	newList: function (tagContentList, tagContentListItem) {
+			 var mainList = document.createElement ('ol');
+			 var parent = document.querySelector('form');
+			 parent.insertBefore (mainList, parent.children[0]);
+
 			 for (var i = 0; i <= tagContentList.length - 1; i++) {
-			   var elementList = document.createElement ('ul');
-			   elementList.className = 'list';
-			   var num = (i + 1);
-			   var content = num + '. ' + tagContentList[i];
-			   elementList.innerHTML = content;
-			   var parent = document.querySelector('form');
-			   parent.insertBefore (elementList, parent.children[i]);
+			   var elementMainList = document.createElement ('li');
+			   elementMainList.className = 'list';
+			   elementMainList.innerHTML = tagContentList[i];
+			   mainList.appendChild (elementMainList);
 			   
+			   var elementList = document.createElement ('ul');
+			   elementMainList.appendChild (elementList);
+			   
+
 		 	    for (var j = 0; j < tagContentListItem.length; j++) {
 		 	  	  var listItem = document.createElement ('li');
 				  listItem.className = 'list__item';
